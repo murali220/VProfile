@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("Checkout") {
       steps {
-        git credentialsid: 'git', url: 'https://github.com/murali220/VProfile.git'
+        git credentialsId: 'git', url: 'https://github.com/murali220/VProfile.git'
       }
     }
     stage("Test") {
