@@ -1,12 +1,9 @@
 pipeline {
   agent any
-  parameters {
-    choice(name: 'VERSION', choices: ['1.1.0' , '1.1.1' , '1.1.2'], description: '')
-  }
   stages {
-    stage("Build") {
+    stage("Checkout") {
       steps {
-        echo 'Building application.....'
+        git credentialsid: 'git', url: 'https://github.com/murali220/VProfile.git'
       }
     }
     stage("Test") {
