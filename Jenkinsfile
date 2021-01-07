@@ -18,6 +18,7 @@ stages {
       steps {
         sh "mvn clean install"
         }
+		}
 		stage("Deploy") {
       steps {
 	  sshagent(['tomcat_deploy']) {
@@ -26,5 +27,4 @@ stages {
         }
         }
   }
-}
 }
